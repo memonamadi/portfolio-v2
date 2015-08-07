@@ -1,0 +1,144 @@
+// bower:scss
+// endbower
+
+@import 'partials/_variables';
+@import 'partials/_mixins';
+
+body, html {
+  @include reset;
+  font-family: $site-font;
+  font-size: 100%;
+  font-weight: 300;
+  line-height: 1.7;
+  @media screen and (min-width: $bp-xs) {
+      font-size: 120%;
+  }
+}
+
+h2 {
+  font-weight: 300;
+}
+
+a {
+  color: $main-colour;
+  text-decoration: none;
+  font-size: 120%;
+  letter-spacing: 1px;
+  cursor: pointer;
+  &:hover {
+    border-bottom: 1px solid $main-colour;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 70px 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+  @media screen and (min-width: $bp-m) {
+    flex-direction: row;
+  }
+}
+
+header,
+.intro-content,
+.content-body {
+  flex: 1;
+}
+
+header {
+  @media screen and (min-width: $bp-m) {
+    flex: 1;
+    text-align: center;
+  }
+  img {
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.content-body {
+  margin: 10px 0;
+  @media screen and (min-width: $bp-m) {
+    margin-top: 0;
+  }
+  .intro-content,
+  .main-content,
+  .social {
+    margin-bottom: 50px;
+    @media screen and (min-width: $bp-m) {
+      margin-bottom: 80px;
+    }
+  }
+  .intro-content {
+    font-size: 140%;
+    p {
+      @media screen and (min-width: $bp-m) {
+        margin-top: 5px;
+      }
+    }
+  }
+  @media screen and (min-width: $bp-m) {
+    flex: 4;
+  }
+}
+
+// css3 fade in animation
+.fade-in {
+  opacity:0;  
+  -webkit-animation:fadeIn ease-in 1;  
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+  
+  -webkit-animation-fill-mode:forwards;  
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+  
+  -webkit-animation-duration:1.5s;
+  -moz-animation-duration:1.5s;
+  animation-duration:1.5s;
+}
+
+.fade-in.one {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+ 
+.fade-in.two {
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay:0.7s;
+  animation-delay: 0.7s;
+}
+ 
+.fade-in.three {
+  -webkit-animation-delay: 0.9s;
+  -moz-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
